@@ -89,8 +89,10 @@ It uses migrations to handle database operations
 - `context = {'items': items}`
 - `return render(request, 'todo/todo_list.html', context)` will allow our page to access the context variable created from our Items model
 
+### Submitting a from
 
-from .models import Item
+- Same way as flask but include just after <form>
+- {% csrf_token %}
+- This creates a unique token to make sure POST is coming from correct form and not forged
 
-# Register your models here.
-admin.site.register(Item)
+
