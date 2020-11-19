@@ -1,9 +1,16 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+## Simple django instructions
 
-Welcome USER_NAME,
+`$ pip3 install django`
+pip3 installs to python3
+pip installs to python2
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Site packages (installed libs) live Here
+/workspace/.pip-modules/lib/python3.8/site-packages
 
+`$ cd -` - go to prev dir
+
+Start a project in Django
+`$ django-admin startproject django_todo .` the . says make project in current directory
 ## Gitpod Reminders
 
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
