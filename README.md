@@ -79,6 +79,15 @@ It uses migrations to handle database operations
 * `admin.site.register(Item)`
 * This import Item from models.py in this directory and registers them, they will be visible on admin page now.
 
+- You can now to to /admin find the Item collection and add items
+
+### Rendering values to page
+
+- Start is todo/views.py
+- `from .models import Item` will allow us to use the Item model in our views
+- `items = Item.objects.all()`
+- `context = {'items': items}`
+- `return render(request, 'todo/todo_list.html', context)` will allow our page to access the context variable created from our Items model
 
 
 from .models import Item
