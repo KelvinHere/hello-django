@@ -5,12 +5,33 @@ pip3 installs to python3
 pip installs to python2
 
 Site packages (installed libs) live Here
-/workspace/.pip-modules/lib/python3.8/site-packages
+- `/workspace/.pip-modules/lib/python3.8/site-packages`
 
 `$ cd -` - go to prev dir
 
 Start a project in Django
-`$ django-admin startproject django_todo .` the . says make project in current directory
+- `$ django-admin startproject django_todo .` the . says make project in current directory
+
+Running the app
+- `python3 manage.py runserver`
+
+# Simple Route
+Create an app (a module that can be used by the main app)
+- `python3 manage.py startapp todo`
+- Create the todo app
+- In the new todo folder the app created open views.py
+- import `HttpResponse` from django.shortcuts
+- `def say_hello(request):`
+    - `return HttpResponse("Hello!")`
+- Creates a view
+- Give a route to this view in django_todo > urs.py
+    - from here import the route `from todo.views import say_hello`
+- define the url for this view with path function
+    - path('hello/', say_hello, name='hello')
+    - is URL, view function, name
+
+
+
 ## Gitpod Reminders
 
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
