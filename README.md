@@ -151,3 +151,20 @@ To find out where you are not covered
 - You can check the app has this addon by cli `heroku addons`
 
 * If you wanted to use MySQL, the addon above would be called ClearDB instead of 'Heroku Postgres'
+
+#### Setup django to connect to remote database
+- `pip3 install dj_database_url`
+- This package will allow us to parse the database url that Heroku created.  And get all the connection information out of it.
+- Will need to freeze requirements again as this is a new package
+- Grab database url from the app on heroku or CLI `heroku config`
+
+* setting.py has database settings make the database have this information
+* `import dj_database_url` in this file
+* DATABASES = {'default': dj_database_url.parse('your database url from heroku')}
+
+### Deploying
+
+- you may need to update the config below
+- `$ heroku config:set DISABLE_COLLECTSTATIC=1`
+
+* Create a procfile to define project as web app with web server
