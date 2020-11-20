@@ -96,3 +96,22 @@ It uses migrations to handle database operations
 - This creates a unique token to make sure POST is coming from correct form and not forged
 
 
+## Django testing
+
+the test.py file has already imported TestCase from django.test this is an extension of pythons own unittest.
+
+run the tests with `python3 manage.py test`
+
+as long as a file starts with test it will be picked up when running tests example you could have 3 test files in the todo folder
+- test.py
+- test_views.py
+- test_logic.py
+
+to only pick a specific test file to run 
+- `python3 manage.py test todo.test_forms`
+
+to only run a class of tests in a specific file
+- `python3 manage.py test todo.test_forms.TestItemForm`
+
+to only run a specific test ina specific class in a specific file
+- `python3 manage.py test todo.test_forms.TestItemForm.test_fields_are_explicit_in_form_metaclass`
