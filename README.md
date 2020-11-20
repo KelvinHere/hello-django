@@ -115,3 +115,15 @@ to only run a class of tests in a specific file
 
 to only run a specific test ina specific class in a specific file
 - `python3 manage.py test todo.test_forms.TestItemForm.test_fields_are_explicit_in_form_metaclass`
+
+### Coverage - test %
+Shows how much of your code your tests Coverage
+- install `pip3 install coverage`
+- run `coverage run --source=todo manage.py test` to run tests in todo
+- run `coverage report` to show coverage of code
+
+To find out where you are not covered
+- run `coverage html` this creates a dir called htmlcov
+- In this is an interactive webpage, so start a http server to view
+- run `python3 -m http.server' and navigate to htmlcov/index.html
+- Find uncovered code and write tests for them.

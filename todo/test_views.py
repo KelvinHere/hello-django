@@ -36,3 +36,11 @@ class TestViews(TestCase):
         self.assertRedirects(response, '/')  # Check that after item is toggled you are redirected to /
         updated_item = Item.objects.get(id=item.id)  # Get the toggled item
         self.assertFalse(updated_item.done)  # Updated item should now be false
+
+    def test_can_edit_item(self):
+        item = Item.objects.create(name='Test Todo Item', done=True) # Add a test item
+        response = self.client.post(f'/edit/{item.id}', {'name': 'new updated name'})  # Post new updated name to edit item
+        self.assertRedirects(response, '/')  # Check that after item is edited you are redirected to /
+        updated_item = Item.objects.get(id=item.id)  # Get the toggled item
+        self.assertEqual(updated_item.name, 'new updated name')
+        
