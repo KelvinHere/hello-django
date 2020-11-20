@@ -174,3 +174,12 @@ To find out where you are not covered
 - 'DisallowedHost at /  Invalid HTTP_HOST header'
 - You need to add the url given to solve this to settings.py > ALLOWED_HOSTS as a string
 
+- push to heroku app should be deployed.
+
+### Connect heroku to github
+Have heroku auto update to the most current version pushed to github
+by linking heroku to the github repo
+
+- Heroku website > your app > deploy > deployment method > github
+- Authorise heroku
+- Select Enable automatic deploys on the master branch
