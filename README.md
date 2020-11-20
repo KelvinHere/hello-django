@@ -167,6 +167,7 @@ Allow the app to use local db when developing and auto use PostgresDB when
 deployed.
 
 - Check the DIFF for the commit called "DB: Set up a local and deployed database at the same time"
+- Add to the local workspace an env var called DEVELOPMENT: TRUE. in gitpod this is through workspaces.
 
 ### Deploying
 
