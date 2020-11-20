@@ -168,3 +168,9 @@ To find out where you are not covered
 - `$ heroku config:set DISABLE_COLLECTSTATIC=1`
 
 * Create a procfile to define project as web app with web server
+* `web: gunicorn django_todo.wsgi:application` in the procfile tells heroku to launch the app through gunicorn
+
+- When opening the app you will get an error
+- 'DisallowedHost at /  Invalid HTTP_HOST header'
+- You need to add the url given to solve this to settings.py > ALLOWED_HOSTS as a string
+
