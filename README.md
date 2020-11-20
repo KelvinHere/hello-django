@@ -169,6 +169,9 @@ deployed.
 - Check the DIFF for the commit called "DB: Set up a local and deployed database at the same time"
 - Add to the local workspace an env var called DEVELOPMENT: TRUE. in gitpod this is through workspaces.
 
+* Use the DEVELOPMENT var to decide which database should run and which ALLOWED_HOSTS are allowed.
+* This env var will only be present locally so if development == false you are deployed
+
 ### Deploying
 
 - you may need to update the config below
@@ -191,3 +194,9 @@ by linking heroku to the github repo
 - Authorise heroku
 - Select Enable automatic deploys on the master branch
 
+## How to generate new secret keys
+
+- Use a django secret key generator such as https://miniwebtool.com/django-secret-key-generator/ to create a key
+- Place this as an env var in your local workspace the same way as the previous DEVELOPMENT env var.
+- Create a new one again for the Heroku deployed app
+- Both local workspace and Heroku app now have new secret keys
