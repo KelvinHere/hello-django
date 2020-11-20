@@ -132,7 +132,7 @@ To find out where you are not covered
 
 - PostgreSQL
 - install `pip3 install psycopg2-binary`
-- this is so django can use Postgre DB rather than the built in db.sqlite3 file used locally
+- this is so django can use Postgres DB rather than the built in db.sqlite3 file used locally
 
 - Gunicorn
 - Web Server the app will run on
@@ -140,3 +140,14 @@ To find out where you are not covered
 
 - Remember to updat requirements.txt
 - with `pip3 freeze --local > requirements.txt`
+
+- CLI command for creating a heroku app
+- `heroku apps:create django-todo-kelvinhere --region eu`
+
+### Setup a Postgres database
+- On the heroku website in your app > resources > find > heroku postgres (select this)
+- This adds the postgres resource to the app
+- In settings there will now be a DATABASE_URL k,v pair we can access through the apps enviromental variables when deployed on heroku
+- You can check the app has this addon by cli `heroku addons`
+
+* If you wanted to use MySQL, the addon above would be called ClearDB instead of 'Heroku Postgres'
