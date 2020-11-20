@@ -127,3 +127,16 @@ To find out where you are not covered
 - In this is an interactive webpage, so start a http server to view
 - run `python3 -m http.server' and navigate to htmlcov/index.html
 - Find uncovered code and write tests for them.
+
+## Deploying to heroku with PostgreSQL
+
+- PostgreSQL
+- install `pip3 install psycopg2-binary`
+- this is so django can use Postgre DB rather than the built in db.sqlite3 file used locally
+
+- Gunicorn
+- Web Server the app will run on
+- `pip3 install gunicorn`
+
+- Remember to updat requirements.txt
+- with `pip3 freeze --local > requirements.txt`
