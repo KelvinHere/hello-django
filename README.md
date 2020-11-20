@@ -162,6 +162,12 @@ To find out where you are not covered
 * `import dj_database_url` in this file
 * DATABASES = {'default': dj_database_url.parse('your database url from heroku')}
 
+#### PostgresDB production and MySqlite for development
+Allow the app to use local db when developing and auto use PostgresDB when 
+deployed.
+
+- Check the DIFF for the commit called "DB: Set up a local and deployed database at the same time"
+
 ### Deploying
 
 - you may need to update the config below
@@ -183,3 +189,4 @@ by linking heroku to the github repo
 - Heroku website > your app > deploy > deployment method > github
 - Authorise heroku
 - Select Enable automatic deploys on the master branch
+
